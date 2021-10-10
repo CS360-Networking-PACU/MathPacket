@@ -34,11 +34,11 @@ valgrind_server: bin/mathPacket_server
 clean:
 	rm -f bin/*
 
-printClient:
+printClient: bin
 	enscript -C -T 2 -p - -M Letter -Ec --color -fCourier8 src/mathPacket_client.c  | ps2pdf - bin/mathPacket_client.pdf
 
-printServer:
+printServer: bin
 	enscript -C -T 2 -p - -M Letter -Ec --color -fCourier8 src/mathPacket_server.c  | ps2pdf - bin/mathPacket_server.pdf
 
-printErrors:
+printErrors: bin
 	enscript -C -T 2 -p - -M Letter -Ec --color -fCourier8 src/mathPacket_errors.c  | ps2pdf - bin/mathPacket_errors.pdf
