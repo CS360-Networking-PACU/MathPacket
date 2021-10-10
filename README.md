@@ -15,7 +15,7 @@ or
 make valgrind_server
 ```
 
-If you need to change the command line options sent to your client or server with valgrind, check out the Makefile.
+If you need to change the command line options sent to your [client](./Makefile#L29) or [server](./Makefile#L32) with valgrind, check out the Makefile.
 
 
 ### Printing to PDF
