@@ -22,7 +22,7 @@ bin:
 bin/%: bin/%.o
 	gcc -o $@ -g -Wall $^
 
-bin/%.o: src/%.c
+bin/%.o: bin src/%.c
 	gcc -c -o $@ -g -Wall $^
 
 valgrind_client: bin/mathPacket_client
