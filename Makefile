@@ -22,8 +22,8 @@ bin:
 bin/%: bin/%.o
 	gcc -o $@ -g -Wall $^
 
-bin/%.o: bin src/%.c
-	gcc -c -o $@ -g -Wall $^
+bin/%.o: src/%.c bin
+	gcc -c -o $@ -g -Wall $<
 
 valgrind_client: bin/mathPacket_client
 	valgrind -v --leak-check=yes --track-origins=yes --leak-check=full --show-leak-kinds=all bin/mathPacket_client 127.0.0.1 8080 1 + 2
